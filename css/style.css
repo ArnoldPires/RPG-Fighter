@@ -14,3 +14,6 @@
 h1, h2 {
   text-align: center;
 }
+.interface img {
+  width: 160px;
+}
