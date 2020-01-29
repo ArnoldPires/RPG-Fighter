@@ -36,7 +36,7 @@ let GameManager = {
     let getInterface = document.querySelector(".interface");
     getInterface.innerHTML = '<img src="images/heros/' +
     classTpye.toLowerCase() + '.png" class="images/heros"><div><h3>' + classTpye
-    + '</h3><p>Health: ' + player.health +
+    + '</h3><p class="health-player">Health: ' + player.health +
     '</p><p>Mana: ' + player.mana +
     '</p><p>strength: ' + player.strength +
     '</p><p>agility: ' + player.agility +
