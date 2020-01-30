@@ -6,37 +6,37 @@ let GameManager = {
   resetPlayer: function(classType) {
     switch (classType) {
       case "elementalist":
-        player = new Player(classType, 80, 0, 50, 200, 50);
+        player = new Player(classType, 80, 200, 40, 90, 70);
         break;
       case "engineer":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 180, 0, 80, 100, 90);
         break;
       case "guardian":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 80, 180, 200, 110, 70);
         break;
       case "mesmer":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 95, 200, 50, 60, 65);
         break;
       case "necromancer":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 250, 200, 90, 40, 30);
         break;
       case "ranger":
-        player = new Player(classType, 200, 0, 50, 200, 50);
+        player = new Player(classType, 180, 30, 180, 200, 120);
         break;
       case "revenant":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 170, 20, 190, 100, 110);
         break;
       case "thief":
-        player = new Player(classType, 100, 0, 100, 150, 200);
+        player = new Player(classType, 80, 0, 120, 210, 220);
         break;
       case "warrior":
-        player = new Player(classType, 200, 0, 200, 100, 50);
+        player = new Player(classType, 250, 0, 250, 50, 40);
         break;
     }
     let getInterface = document.querySelector(".interface");
     getInterface.innerHTML = '<img src="images/heros/' +
     classType.toLowerCase() + '.png" class="images/heros"><div><h3>' + classType
-    + '</h3><p>Health: ' + player.health +
+    + '</h3><p class="health-player">Health: ' + player.health +
     '</p><p>Mana: ' + player.mana +
     '</p><p>strength: ' + player.strength +
     '</p><p>agility: ' + player.agility +
@@ -55,19 +55,19 @@ let GameManager = {
     let getActions = document.querySelector(".actions");
     let getEnemy = document.querySelector(".enemy");
     //Create enemy
-    let enemy00 = new Enemy("centaur", 100, 0, 50, 100, 10);
-    let enemy01 = new Enemy("demon", 100, 0, 50, 100, 100);
-    let enemy02 = new Enemy("djinn", 100, 0, 50, 100, 100);
-    let enemy03 = new Enemy("dragon", 100, 0, 50, 100, 100);
-    let enemy04 = new Enemy("ettin", 100, 0, 50, 100, 100);
-    let enemy05 = new Enemy("grawl", 100, 0, 50, 100, 100);
-    let enemy06 = new Enemy("harpy", 100, 0, 50, 100, 100);
-    let enemy07 = new Enemy("hydra", 100, 0, 50, 100, 100);
-    let enemy08 = new Enemy("jotun", 100, 0, 50, 100, 100);
-    let enemy09 = new Enemy("krait", 100, 0, 50, 100, 100);
-    let enemy10 = new Enemy("ogre", 100, 0, 50, 100, 100);
-    let enemy11 = new Enemy("troll", 100, 0, 50, 100, 100);
-    let enemy12 = new Enemy("undead", 100, 0, 50, 100, 100);
+    let enemy00 = new Enemy("centaur", 170, 0, 100, 100, 100);
+    let enemy01 = new Enemy("demon", 250, 0, 150, 80, 130);
+    let enemy02 = new Enemy("djinn", 100, 200, 80, 70, 90);
+    let enemy03 = new Enemy("dragon", 300, 30, 100, 100, 90);
+    let enemy04 = new Enemy("ettin", 130, 0, 120, 70, 70);
+    let enemy05 = new Enemy("grawl", 100, 40, 110, 80, 80);
+    let enemy06 = new Enemy("harpy", 80, 0, 150, 80, 150);
+    let enemy07 = new Enemy("hydra", 250, 60, 200, 50, 70);
+    let enemy08 = new Enemy("jotun", 200, 0, 200, 60, 70);
+    let enemy09 = new Enemy("krait", 80, 200, 120, 180, 160);
+    let enemy10 = new Enemy("ogre", 200, 0, 250, 80, 150);
+    let enemy11 = new Enemy("troll", 250, 0, 250, 60, 80);
+    let enemy12 = new Enemy("undead", 180, 170, 250, 50, 50);
     let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(13));
     switch (chooseRandomEnemy) {
       case 0:
